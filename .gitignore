@@ -52,7 +52,7 @@ coverage
 .cache
 
 # Optional: Uncomment if you don't want to commit generated QR codes
-# qr-codes/
+qr-codes/
 
 # GitHub Pages
 # Note: If using GitHub Actions to build, keep 'dist' ignored

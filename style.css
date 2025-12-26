@@ -25,6 +25,10 @@
   -webkit-tap-highlight-color: transparent;
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
 body {
   font-family: 'Outfit', sans-serif;
   background-color: var(--color-bg);
@@ -206,6 +210,74 @@ header {
   display: flex;
   align-items: center;
   gap: 0.5rem;
+}
+
+/* Product Section (for single page app) */
+.product-section {
+  position: relative;
+}
+
+.products-container {
+  margin-bottom: 2rem;
+}
+
+/* Expandable Product Container */
+.product-expandable {
+  overflow: hidden;
+  transition: box-shadow 0.3s ease;
+}
+
+.product-expandable:hover {
+  box-shadow: var(--shadow-lg);
+}
+
+.product-toggle {
+  width: 100%;
+  background: none;
+  border: none;
+  padding: 1.5rem;
+  cursor: pointer;
+  text-align: left;
+  transition: background-color 0.2s ease;
+}
+
+.product-toggle:hover {
+  background-color: rgba(0, 0, 0, 0.02);
+}
+
+.product-toggle:focus {
+  outline: 2px solid var(--color-primary);
+  outline-offset: -2px;
+  border-radius: var(--radius-lg);
+}
+
+.product-header-content {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+}
+
+.toggle-icon {
+  flex-shrink: 0;
+  margin-left: 1rem;
+  color: var(--color-text-light);
+}
+
+.product-expandable-content {
+  padding: 0 1.5rem 1.5rem 1.5rem;
+  animation: slideDown 0.3s ease-out;
+}
+
+@keyframes slideDown {
+  from {
+    opacity: 0;
+    transform: translateY(-10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }
 
 /* Animations */
